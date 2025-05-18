@@ -110,13 +110,13 @@ class ModelTraining:
         try:    
             weight_layer = model.get_layer(layer_name)
             weights = weight_layer.get_weights()[0]
-            weights = weights/np.linalg.norm(weights, axis=1).reshape((-1,1))
+            weights = weights / np.linalg.norm(weights, axis=1).reshape((-1,1))
             logger.info(f"Extracting weights for {layer_name}")
-
+            return weights  # <-- RETORNANDO OS PESOS
         except Exception as e:
             logger.error(str(e))
             raise CustomException ("Error during Weights Extraction Process", e)
-    
+
     
     def save_model_weights(self, model):
 
