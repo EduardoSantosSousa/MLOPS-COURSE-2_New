@@ -1,0 +1,114 @@
+/* Reset & Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Oxanium', 'Roboto', sans-serif;
+  color: #ffffff;
+  background: url('https://images8.alphacoders.com/114/1143731.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+/* Overlay for dark effect */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(12, 10, 30, 0.85);
+  z-index: 0;
+}
+
+/* Container Styling */
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: 5% auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ffd5ec;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="number"] {
+  padding: 10px;
+  width: 80%;
+  max-width: 300px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #ff1c68;
+}
+
+/* Results */
+.results {
+  margin-top: 30px;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.results h2 {
+  margin-bottom: 15px;
+  color: #ffc1e3;
+}
+
+.results ul {
+  list-style: none;
+}
+
+.results li {
+  padding: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 1.1rem;
+}
