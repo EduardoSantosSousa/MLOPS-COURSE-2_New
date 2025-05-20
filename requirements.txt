@@ -11,3 +11,5 @@ scikit-learn
 dvc
 dvc-gs
 flask
+google-auth>=2.28.0
+gcsfs>=2024.2.0
