@@ -24,7 +24,7 @@ pipeline{
                     . ${VENV_DIR}/bin/activate
                     pip install --upgrade pip
                     pip install -e .
-                    pip install 'dvc[gcs]' --upgrade
+                    pip install dvc
 
                         '''                    
                 }
@@ -34,7 +34,7 @@ pipeline{
 
         stage("DVC Pull"){
             steps{
-                withCredentials([file(credentialsId: 'gcp-key', variable: 'serious-cat-455501-d2-6664e3bc746a.json (gcp-key)')]){
+                withCredentials([file(credentialsId: 'gcp-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]){
                     script{
                         echo 'DVC Pul.....'
                         sh'''
