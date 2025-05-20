@@ -33,7 +33,7 @@ pipeline{
 
 
         stage("DVC Pull"){
-            stpes{
+            steps{
                 withCredentials([file(credentialsId: 'gcp-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]){
                     script{
                         echo 'DVC Pul.....'
