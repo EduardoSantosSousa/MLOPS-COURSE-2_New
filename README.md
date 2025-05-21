@@ -16,7 +16,7 @@ The complete pipeline involves:
 
 ## 📷Demo
 
-![App Screenshot](./screenshot.png)
+![image](https://github.com/user-attachments/assets/060ff95e-5f64-44ef-b9eb-bb1e8c70b7ed)
 
 ## 🚀 Features
 
