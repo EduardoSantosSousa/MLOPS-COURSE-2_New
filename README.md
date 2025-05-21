@@ -16,7 +16,8 @@ The complete pipeline involves:
 
 ## 📷Demo
 
-![image](https://github.com/user-attachments/assets/060ff95e-5f64-44ef-b9eb-bb1e8c70b7ed)
+![image](https://github.com/user-attachments/assets/9fa63f26-84fd-4a38-9b1d-75f8de512266)
+
 
 ## 🚀 Features
 
