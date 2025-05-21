@@ -3,7 +3,7 @@ pipeline{
 
     environment{
         VENV_DIR = 'venv'
-        TZ = 'UTC'  # Define o timezone globalmente
+        TZ = 'UTC' 
     }
 
     stages{
