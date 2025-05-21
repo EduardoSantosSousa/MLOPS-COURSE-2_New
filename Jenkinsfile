@@ -20,11 +20,25 @@ pipeline{
                 script{
                     echo 'Making a virtual environment.......'
                     sh '''
-                    python -m venv ${VENV_DIR}
                     . ${VENV_DIR}/bin/activate
-                    pip install --upgrade pip
-                    pip install -e .
-                    pip install --upgrade dvc gcsfs google-auth google-cloud-storage
+                    export TZ=UTC
+
+                    # --- Verificação das Credenciais ---
+                    echo "Verificando existência do arquivo..."
+                    ls -l ${GOOGLE_APPLICATION_CREDENTIALS} || echo 'Arquivo não encontrado!'
+
+                    echo "Conteúdo parcial do arquivo (primeiras 2 linhas):"
+                    head -n 2 ${GOOGLE_APPLICATION_CREDENTIALS} || echo 'Falha ao ler arquivo'
+
+                    echo "Testando autenticação com o Google Cloud..."
+                    python -c "
+
+                    import os
+                    from google.cloud import storage
+                    client = storage.Client()
+                    buckets = list(client.list_buckets(max_results=1))
+                    print('Conexão bem-sucedida! Buckets encontrados:', len(buckets))
+                    " || echo 'Falha na autenticação'
                     '''                    
                 }
             }
