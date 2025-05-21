@@ -25,8 +25,7 @@ pipeline{
                     pip install --upgrade pip
                     pip install -e .
                     pip install --upgrade dvc gcsfs google-auth google-cloud-storage
-
-                        '''                    
+                    '''                    
                 }
             }
         }
@@ -40,7 +39,6 @@ pipeline{
                         sh'''
                         . ${VENV_DIR}/bin/activate
                         export TZ=UTC
-                        gcloud auth activate-service-account --key-file=${GOOGLE_APPLICATION_CREDENTIALS}
                         dvc pull -v
                         '''
                     }
