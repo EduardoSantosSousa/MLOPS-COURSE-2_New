@@ -12,7 +12,7 @@ The complete pipeline involves:
 - 🐳 Containerization with Docker
 - ⚙️ Automated Deployment with Jenkins
 - ☸️ Orchestration with Kubernetes (Google Cloud Autopilot)
-- 💻 Interactive web interface
+- 💻 Interactive web interface (HTML and CSS)
 
 ## 📷Demo
 
